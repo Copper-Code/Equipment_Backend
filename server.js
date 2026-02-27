@@ -33,8 +33,8 @@ const {
 } = require('assert'); //ใช้สำหรับ reject Promise ในกรณีที่เกิด error ในการอัปโหลดรูปไปที่ Cloudinary
 
 
-console.log("Test config Cloudinary URL:", process.env.CLOUDINARY_URL);
-console.log(process.env.CLOUDINARY_URL)
+// console.log("Test config Cloudinary URL:", process.env.CLOUDINARY_URL);
+// console.log(process.env.CLOUDINARY_URL)
 
 
 
