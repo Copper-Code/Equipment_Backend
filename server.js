@@ -7,7 +7,7 @@ const app = express()
 const fs = require('fs');
 const path = require('path');
 
-
+cloudinary.config(process.env.CLOUDINARY_URL);
 
 
 
@@ -31,6 +31,7 @@ const console = require('console'); //ใช้สำหรับแสดงผ
 const {
     reject
 } = require('assert'); //ใช้สำหรับ reject Promise ในกรณีที่เกิด error ในการอัปโหลดรูปไปที่ Cloudinary
+
 
 console.log("Test config Cloudinary URL:", process.env.CLOUDINARY_URL);
 console.log(process.env.CLOUDINARY_URL)
