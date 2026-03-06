@@ -97,7 +97,7 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(5000)
+// app.listen(5000)
 
 //Multer for image upload
 //จัดเก็บไฟล์โดยใช้โฟลเดอร์ uploads
@@ -778,6 +778,7 @@ app.put('/update_equipment/:eq_id', upload.single('upload_image'), async (req, r
 
 //Read
 app.get('/equipment', async (req, res) => {
+    console.log("Hello Equipment API");
     const sql_read = `
     SELECT 
     equipment.eq_id,
@@ -971,6 +972,6 @@ WHERE equipment.eq_id=? LIMIT 1;`
     }
 });
 
-app.listen(8081, () => {
-    console.log("listening 8081 เริ่มแล้วจ้า")
+app.listen(process.env.PORT||8081, () => {
+    console.log(`Server runing : ${process.env.PORT}`)
 });
